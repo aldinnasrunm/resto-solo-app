@@ -112,7 +112,6 @@ function ResponsiveAppBar() {
             <IconButton
               size="large"
               aria-label="account of current user"
-              aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="inherit"
@@ -170,7 +169,7 @@ function ResponsiveAppBar() {
               mr: 1,
             }}
             onClick={() => {
-              window.location.href = "/";
+              // window.location.href = "/";
               scrollTo("home");
               console.log("clicked");
             }}
@@ -212,7 +211,7 @@ function ResponsiveAppBar() {
                 onClick={() => {
                   // scrollTo(page.toLowerCase())
                   // window.location.href = `/${page.toLowerCase()}`;
-                  window.location.href = '/';
+                  // window.location.href = '/';
 
                   scrollTo(page.toLowerCase());
                   console.log("clicked");

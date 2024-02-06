@@ -61,27 +61,7 @@ export default class MenuContainer extends Component<{}, MenuContainerState> {
 
     return (
       <div id="menu" className="bg-primary flex flex-col">
-        <Typography
-          variant="h5"
-          noWrap
-          component="a"
-          className="text-orange-600 text-lg font-bold"
-          sx={{
-            mr: 2,
-            display: { xs: "flex", md: "flex" },
-            fontFamily: "sans-serif",
-            fontWeight: 700,
-            letterSpacing: ".2rem",
-            color: "inherit",
-            textDecoration: "none",
-            marginBottom: "2rem",
-            alignItems: "center",
-            justifyContent: "center",
-            paddingTop: "4rem",
-          }}
-        >
-          Our Menu
-        </Typography>
+        <h4 className="font-semibold text-center text-lg text-orange-600 mb-6">Our Menu</h4>
         <Box
           className="mx-auto"
           sx={{ flexGrow: 1, alignItems: "center", justifyContent: "center" }}
@@ -149,55 +129,53 @@ export default class MenuContainer extends Component<{}, MenuContainerState> {
                   md={4}
                   lg={3}
                 >
-
                   <Link href={`/menu/${menu.id}`}>
-                  <Card
-                    sx={{
-                      maxWidth: 345,
-                      minHeight: 400,
-                      marginX: 2,
-                      marginY: 2,
-                      bgcolor: "#2B2A32",
-                      color: "#FFFFFF",
-                    }}
-                  >
-                    <CardHeader
-                      avatar={
-                        <Avatar
-                          variant="rounded"
-                          sx={{ bgcolor: "#1A1A1A" }}
-                          aria-label="price"
-                          style={{ borderRight: "1px solid #DDDDDD" }}
-                        >
-                          {`$${menu.price}`}
-                        </Avatar>
-                      }
-                      title={menu.name}
-                      subheader={`Dish - ${menu.category}`}
-                      subheaderTypographyProps={{ color: "#FFFFFF" }}
-                    />
-                    <CardMedia
-                      component="img"
-                      style={{
-                        objectFit: "cover",
-                        width: "100%",
-                        height: "200px",
+                    <Card
+                      sx={{
+                        maxWidth: 345,
+                        minHeight: 400,
+                        marginX: 2,
+                        marginY: 2,
+                        bgcolor: "#2B2A32",
+                        color: "#FFFFFF",
                       }}
-                      src={menu.image}
-                      alt="Paella dish"
-                    />
-                    <CardContent>
-                      <Typography
-                        variant="body2"
-                        color="text-white"
-                        style={{ height: "160px" }}
-                      >
-                        {truncateText(menu.description, 10)}
-                      </Typography>
-                    </CardContent>
-                  </Card>
+                    >
+                      <CardHeader
+                        avatar={
+                          <Avatar
+                            variant="rounded"
+                            sx={{ bgcolor: "#1A1A1A" }}
+                            aria-label="price"
+                            style={{ borderRight: "1px solid #DDDDDD" }}
+                          >
+                            {`$${menu.price}`}
+                          </Avatar>
+                        }
+                        title={menu.name}
+                        subheader={`Dish - ${menu.category}`}
+                        subheaderTypographyProps={{ color: "#FFFFFF" }}
+                      />
+                      <CardMedia
+                        component="img"
+                        style={{
+                          objectFit: "cover",
+                          width: "100%",
+                          height: "200px",
+                        }}
+                        src={menu.image}
+                        alt="Paella dish"
+                      />
+                      <CardContent>
+                        <Typography
+                          variant="body2"
+                          color="text-white"
+                          style={{ height: "160px" }}
+                        >
+                          {truncateText(menu.description, 10)}
+                        </Typography>
+                      </CardContent>
+                    </Card>
                   </Link>
-                  
                 </Grid>
               ))}
           </Grid>

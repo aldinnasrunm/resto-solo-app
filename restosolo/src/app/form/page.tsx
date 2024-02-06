@@ -48,7 +48,7 @@ const TestimonialForm = () => {
   };
 
   return (
-    <section id="contact" className="pt-30 pb-32 bg-primary">
+    <section id="feedback" className="pt-30 pb-32 bg-primary">
       <div className="container">
         <div className="w-full px-4">
           <div className="max-w-xl mx-auto text-center mb-16">

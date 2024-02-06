@@ -83,24 +83,9 @@ export default function CustomizedAccordions() {
         backgroundColor: "#18171C",
       }}
     >
-      <Typography
-        variant="h5"
-        noWrap
-        component="a"
-        className="text-orange-600 text-lg font-bold"
-        sx={{
-          mr: 2,
-          display: { xs: "flex", md: "flex" },
-          fontFamily: "sans-serif",
-          fontWeight: 700,
-          letterSpacing: ".2rem",
-          color: "inherit",
-          textDecoration: "none",
-          marginBottom: "2rem",
-        }}
-      >
+      <h4 className="font-semibold text-lg text-orange-600 mb-6">
         Frequently Asked Questions
-      </Typography>
+      </h4>
       <Accordion
         expanded={expanded === "panel1"}
         onChange={handleChange("panel1")}
